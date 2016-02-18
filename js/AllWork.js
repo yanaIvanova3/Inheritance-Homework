@@ -12,6 +12,8 @@ AllWork.prototype.addTask = function (Task) {
         this.tasks.push(Task);
         this.freePlacesForTasks--;
         this.tasks.unshift(Task);
+    } else {
+        console.log('No free places for more tasks!')
     }
 }
 

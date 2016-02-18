@@ -43,5 +43,11 @@ Employee.prototype.startWorkingDay = function () {
 }
 
 Employee.prototype.work = function () {
-    this.currentTask
+    if (this.hoursLeft == 0) {
+        console.log('End of working day for' + this.getEmployeeName());
+    }
+    if (this.getCurrentTask() == 0) {
+        this.setCurrentTask(this.getAllWork().getNextTask());
+        this.hoursLeft -= this.currentTask;
+    }
 }
