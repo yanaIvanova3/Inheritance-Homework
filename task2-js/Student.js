@@ -19,7 +19,7 @@ Student.prototype = Object.create(Person.prototype);
 Student.prototype.constructor = Student;
 
 
-Student.prototype.getInfo = function() {
+Student.prototype.getStudentInfo = function() {
     var personInfo = Person.prototype.getInfo.call(this);
-    return personInfo + ' My score is ' + this.getScore();
+    return personInfo + ' My score is ' + this.getScore() + '.';
 }

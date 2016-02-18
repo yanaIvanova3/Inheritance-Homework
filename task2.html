@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript" src="task2-js/Person.js"></script>
+<script type="text/javascript" src="task2-js/Student.js"></script>
+<script type="text/javascript" src="task2-js/Employee.js"></script>
+<script type="text/javascript">
+    var person = new Person('Jane', 16, 'female');
+    var student = new Student('John', 16, 'male', 5);
+    var employee = new Employee('Doe', 21, 'male', 100);
+
+    console.log(person.getInfo());
+    console.log(student.getStudentInfo());
+    console.log(employee.getEmployeeInfo());
+
+</script>
+</body>
+</html>
