@@ -5,7 +5,7 @@ function Employee(name) {
     var employeeName = name;
     var currentTask = 0;
     var hoursLeft = 8;
-    var allWork = {};
+    var allWork;
 
     this.getEmployeeName = function() {
         return employeeName;
@@ -26,6 +26,16 @@ function Employee(name) {
     this.setHoursLeft = function(hours) {
         hoursLeft = hours;
     }
+
+    this.getAllWork = function(){
+        return this.allWork;
+    }
+
+    this.setAllWork = function(workToBeDone){
+        this.allWork = workToBeDone;
+    }
+
+
 }
 
 Employee.prototype.startWorkingDay = function () {
@@ -33,5 +43,5 @@ Employee.prototype.startWorkingDay = function () {
 }
 
 Employee.prototype.work = function () {
-
+    this.currentTask
 }

@@ -7,12 +7,18 @@ function AllWork () {
     var currentUnassignedTask = 0;
 }
 
-AllWork.prototype.addTask = function (task) {
-    this.tasks.push(task);
+AllWork.prototype.addTask = function (Task) {
+    if (this.freePlacesForTasks != 0) {
+        this.tasks.push(Task);
+        this.freePlacesForTasks--;
+        this.tasks.unshift(Task);
+    }
 }
 
 AllWork.prototype.getNextTask = function() {
-    return this.tasks.shift();
+    this.currentUnsignedTask = this.tasks.pop();
+    this.freePlacesForTasks++;
+    return this.currentUnassignedTask;
 }
 
 AllWork.prototype.isAllWorkDone = function() {
