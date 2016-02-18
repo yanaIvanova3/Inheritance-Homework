@@ -21,5 +21,5 @@ Student.prototype.constructor = Student;
 
 Student.prototype.getStudentInfo = function() {
     var personInfo = Person.prototype.getInfo.call(this);
-    return personInfo + ' My score is ' + this.getScore() + '.';
+    return personInfo + " I`m a student and my average score is " + this.getScore() + '.';
 }

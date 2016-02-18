@@ -12,10 +12,25 @@
     var person = new Person('Jane', 16, 'female');
     var student = new Student('John', 16, 'male', 5);
     var employee = new Employee('Doe', 21, 'male', 100);
+    var person1 = new Person('Janet', 39, 'female');
+    var student1 = new Student('Johny', 18, 'male', 5);
+    var employee1 = new Employee('Joe', 17, 'male', 100);
 
-    console.log(person.getInfo());
-    console.log(student.getStudentInfo());
-    console.log(employee.getEmployeeInfo());
+    var peopleArray = [];
+
+    peopleArray.push(person, person1, employee, employee1, student, student1);
+
+    for (var i = 0; i < peopleArray.length; i++) {
+        if (peopleArray[i].constructor == Person) {
+            console.log(peopleArray[i].getInfo());
+        } else if (peopleArray[i].constructor == Employee) {
+            console.log((peopleArray[i].getEmployeeInfo()), (peopleArray[i].calculateOvertime(2)));
+        } else if (peopleArray[i].constructor == Student) {
+            console.log(peopleArray[i].getStudentInfo());
+        }
+    }
+
+
 
 </script>
 </body>

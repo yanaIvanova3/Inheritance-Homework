@@ -27,5 +27,5 @@ Employee.prototype.calculateOvertime = function(hours) {
 
 Employee.prototype.getEmployeeInfo = function () {
     var personInfo = Person.prototype.getInfo.call(this);
-    return personInfo + ' My day salary is ' + this.getDaySalary() + '$.';
+    return personInfo + ' I am working at a company. My day salary is ' + this.getDaySalary() + '$.';
 }
